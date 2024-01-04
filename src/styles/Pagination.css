@@ -1,0 +1,46 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    animation: movePagination 2s infinite alternate; /* Added a simple animation */
+    width: calc(33.33% - 20px); /* One-third of the page minus the gap */
+    position: fixed;
+    top: 850px;
+    bottom: 100px;
+    left: 0px;
+}
+
+@keyframes movePagination {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(5px); }
+}
+
+.pagination-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color:  #ff6b6b;
+    color: white;
+    font-size: 1em;
+    transition: background-color 0.3s ease;  
+                                                                                                     
+}
+
+.pagination-button:hover {
+    background-color: #556270;
+}
+
+.pagination-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.pagination-info {
+    font-size: 1em;
+    color: white;
+    
+
+}

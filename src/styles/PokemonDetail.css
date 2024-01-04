@@ -1,0 +1,136 @@
+/* PokemonDetail.css */
+
+.pokemon-detail {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: calc(33.33% - 20px); /* One-third of the page minus the gap */
+    max-height: 70vh; /* Maximum height to allow scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    width: calc(33.33% - 20px); /* One-third of the page minus the gap */
+    position: fixed;
+    top: 100px;
+    bottom: 100px;
+    left: 50px;
+    background: linear-gradient(135deg, #ff6b6b, #556270);
+    scrollbar-color: #ff6b6b #556270; /* Set scrollbar track and thumb colors for Firefox */
+    scrollbar-width: thin; /* Adjust scrollbar width for Firefox */
+    animation: shimmer 2s infinite linear;
+}
+
+/* Customize scrollbar track for WebKit browsers */
+.pokemon-detail::-webkit-scrollbar {
+    width: 12px; /* Adjust scrollbar width */
+}
+
+.pokemon-detail::-webkit-scrollbar-track {
+    background-color: #556270; /* Set scrollbar track color for WebKit browsers */
+}
+
+/* Customize scrollbar thumb for WebKit browsers */
+.pokemon-detail::-webkit-scrollbar-thumb {
+    background-color: #ff6b6b; /* Set scrollbar thumb color for WebKit browsers */
+}
+
+.pokemon-name {
+    text-align: center;
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.pokemon-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    animation: bounce 1.5s ease-in-out infinite; /* Bounce animation */
+}
+
+.pokemon-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pokemon-info-item {
+    flex: 1 1 calc(33.33% - 20px);
+    margin: 10px;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: slideIn 1s ease-in-out; /* Slide in animation */
+}
+
+.pokemon-info-item h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.pokemon-info-item ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pokemon-info-item li {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+    text-transform: capitalize;
+}
+
+/* Animations */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+      background-position: 200% 50%;
+    }
+    100% {
+      background-position: -200% 50%;
+    }
+  }
+
+@media (max-width: 768px) {
+    .pokemon-detail {
+        padding: 10px;
+    }
+
+    .pokemon-name {
+        font-size: 1.5em;
+    }
+
+    .pokemon-info-item {
+        flex: 1 1 calc(100% - 20px);
+    }
+}

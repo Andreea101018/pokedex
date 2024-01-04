@@ -1,0 +1,56 @@
+/* NavBar.css */
+
+.navbar {
+    background: linear-gradient(45deg, #ff6b6b, #556270);
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    text-decoration: none;
+    margin: 0 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-logo:hover {
+    transform: scale(1.1);
+}
+
+.logo-img {
+    height: 40px; /* Adjust the height of the logo as needed */
+    width: auto;
+    animation: moveLogo 2s infinite alternate;
+    position: relative;
+    
+  }
+
+@keyframes moveLogo {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+.nav-about {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-about:hover {
+    transform: scale(1.1);
+}

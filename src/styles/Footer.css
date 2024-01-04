@@ -1,0 +1,45 @@
+/* Footer.css */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.footer {
+    background: linear-gradient(45deg, #ff6b6b, #556270);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-top: 902px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-link:hover {
+    transform: scale(1.1);
+}
+
+.footer-separator {
+    color: #fff;
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+.footer-text {
+    color: #fff;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}

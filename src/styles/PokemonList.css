@@ -1,0 +1,158 @@
+/* Loading spinner animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Error message style */
+  .error-message {
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* PokemonList styles */
+  .PokemonListContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .PokemonList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-top: 50px;
+    overflow: hidden;
+    width: calc(33.33% - 20px); /* One-third of the page minus the gap */
+    position: fixed;
+    top: 100px;
+    bottom: 100px;
+    left: 0;
+  }
+  
+  .PokemonList-item {
+    width: calc(50% - 20px); /* Two items per line with some gap */
+    max-width: 250px;
+    margin-bottom: 20px; /* Add some space between rows */
+    background: linear-gradient(135deg, #ff6b6b, #556270);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #e1e1e1;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    filter: brightness(1); /* Initial brightness */
+  }
+  
+  .PokemonList-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.2); /* Brighten on hover */
+    border-color: #fff; /* Change border color on hover */
+  }
+  
+  /* Add a subtle shimmer effect */
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 50%;
+    }
+    100% {
+      background-position: -200% 50%;
+    }
+  }
+  
+  .PokemonList-item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite linear;
+    pointer-events: none;
+  }
+  
+  .PokemonList img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 2px solid #e1e1e1;
+    transition: transform 0.3s ease;
+  }
+  
+  .PokemonList img:hover {
+    transform: rotate(360deg);
+  }
+  
+  .PokemonList-name {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-family: 'Roboto', sans-serif; /* Replace with your desired font */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  
+  
+  /* Pagination styles */
+  .Pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    animation: movePagination 2s infinite alternate;
+  }
+  
+  @keyframes movePagination {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(5px);
+    }
+  }
+  
+  .Pagination-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+  }
+  
+  .Pagination-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .Pagination-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .Pagination-info {
+    font-size: 1em;
+  }
+  
+  /* Responsive layout */
+  @media (max-width: 768px) {
+    .PokemonList-item {
+      width: calc(100% - 20px); /* On smaller screens, make items full width */
+    }
+  }
+  
