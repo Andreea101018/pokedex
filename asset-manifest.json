@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/pokedex/static/css/main.f855e6bc.css",
-    "main.js": "/pokedex/static/js/main.3e03d4a0.js",
-    "static/js/787.4dd77a78.chunk.js": "/pokedex/static/js/787.4dd77a78.chunk.js",
-    "static/media/logo.svg": "/pokedex/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/pokedex/static/css/main.1dd96975.css",
+    "main.js": "/pokedex/static/js/main.9491d240.js",
+    "static/media/cute-pokemon-pikachu-rain-desktop-wallpaper-preview.jpg": "/pokedex/static/media/cute-pokemon-pikachu-rain-desktop-wallpaper-preview.bf0ca70772a7e0e5778a.jpg",
+    "static/media/International_Pokémon_logo.svg.png": "/pokedex/static/media/International_Pokémon_logo.svg.67c4dacdee89f7b7ae1f.png",
     "index.html": "/pokedex/index.html",
-    "main.f855e6bc.css.map": "/pokedex/static/css/main.f855e6bc.css.map",
-    "main.3e03d4a0.js.map": "/pokedex/static/js/main.3e03d4a0.js.map",
-    "787.4dd77a78.chunk.js.map": "/pokedex/static/js/787.4dd77a78.chunk.js.map"
+    "main.1dd96975.css.map": "/pokedex/static/css/main.1dd96975.css.map",
+    "main.9491d240.js.map": "/pokedex/static/js/main.9491d240.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.3e03d4a0.js"
+    "static/css/main.1dd96975.css",
+    "static/js/main.9491d240.js"
   ]
 }
